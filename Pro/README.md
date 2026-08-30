@@ -10,7 +10,7 @@ I built this to figure out why telecom customers leave, and how much it's costin
 | `port1.ipynb` | Notebook that cleans the raw data |
 | `Cleaned_data.csv` | Output of the cleaning step (7,043 rows, 21 columns) |
 | `Port_1.pbix` | The Power BI dashboard |
-| `screenshots/` | PNG exports of each dashboard view |
+| `images/` | PNG exports of each dashboard view |
 
 ## The Dataset
 
@@ -56,15 +56,15 @@ I wireframed this in Figma first, then built it in Power BI. It's technically on
 
 Below that, a line chart tracks churn against tenure buckets, and it drops off a cliff: nearly 48% in the first year, down under 10% by year five or six. There's also a bar chart on churn by payment method (electronic check is the worst offender at 45.29%), one on churn by contract type (month-to-month is 42.71%, two-year contracts are practically loyal at 2.83%), and a column chart comparing average monthly charges between people who left and people who stayed. A payment method slicer filters the whole page.
 
-![Overview page](screenshots/overview.png)
+![Overview page](images/overview.png)
 
 **Churn by Services** breaks things down by what customers subscribed to: tech support, internet service type (fiber optic churns way more than DSL, 41.89% vs 18.96%), device protection, online security, online backup, and phone service.
 
-![Churn by Services page](screenshots/churn-by-services.png)
+![Churn by Services page](images/churn-by-services.png)
 
 **Churn by Family** looks at household and demographic factors: partner status, senior citizens (who churn almost twice as often as everyone else, 41.68% vs 23.61%), dependents, streaming TV, streaming movies, and multiple lines.
 
-![Churn by Family page](screenshots/churn-by-family.png)
+![Churn by Family page](images/churn-by-family.png)
 
 Most of the charts are bar or clustered bar charts. The tenure trend is the one line chart, and the monthly charges comparison is a column chart.
 
@@ -112,11 +112,3 @@ You can also filter the whole Overview page by payment method using the slicer, 
 - Power BI Desktop (DAX, report design)
 - Figma (wireframing)
 - Git/GitHub
-
-## Why I Made This
-
-I wanted a small, complete example of going from messy raw data to a dashboard someone could actually use to make a retention decision. Clean the data, build something visual on top of it, and let the charts point at where the real problems are (month-to-month contracts, electronic check payments, fiber optic customers without add-on services) instead of guessing.
-
-## License
-
-Pick a license if you're planning to share this publicly. MIT works fine for something like this.
