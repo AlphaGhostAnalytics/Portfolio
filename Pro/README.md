@@ -60,7 +60,7 @@ Below that, a line chart tracks churn against tenure buckets, and it drops off a
 
 **Churn by Services** breaks things down by what customers subscribed to: tech support, internet service type (fiber optic churns way more than DSL, 41.89% vs 18.96%), device protection, online security, online backup, and phone service.
 
-![Churn by Services page](Images/Churn_by_service.png)
+![Churn by Services page](Images/Churn_by_services.png)
 
 **Churn by Family** looks at household and demographic factors: partner status, senior citizens (who churn almost twice as often as everyone else, 41.68% vs 23.61%), dependents, streaming TV, streaming movies, and multiple lines.
 
