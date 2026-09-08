@@ -1,0 +1,36 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Power BI ---
+# Temp/lock files Power BI Desktop creates while a .pbix is open
+~$*.pbix
+*.pbix.lock
+*.pbix.bak
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor/IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- Logs / temp ---
+*.log
+*.tmp
+
+# --- Large data files (excluded from repo) ---
+Pro_3/Retail.csv
