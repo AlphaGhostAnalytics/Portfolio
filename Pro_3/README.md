@@ -9,7 +9,7 @@ Same pipeline I've used on the other projects: clean in Python, wireframe in Fig
 ## Dataset
 
 - **Source:** Online Retail II (UCI Machine Learning Repository)
-- **Size:** ~1.07M raw rows across two sheets (`Year 2009-2010`, `Year 2010-2011`)
+- **Size:** 1.07M raw rows across two sheets (`Year 2009-2010`, `Year 2010-2011`)
 - **Fields:** Invoice, StockCode, Description, Quantity, InvoiceDate, Price, Customer ID, Country
 
 ## Data Cleaning (Python)
@@ -26,8 +26,8 @@ The raw file comes as two separate sheets, one per year, so step one was just st
 ## Tools Used
 
 - **Python** (pandas): data cleaning and exploratory analysis
-- **Figma**: dashboard wireframing
 - **Power BI**: DAX measures, visuals, and interactive dashboard
+- **Figma**: dashboard wireframing
 - **GitHub**: portfolio hosting
 
 ## Business Questions & Answers
@@ -83,9 +83,3 @@ UK customers buy often, in smaller amounts. Customers in Ireland and the Netherl
 - Seasonality drives almost everything here. The whole business seems built around the run-up to Christmas
 - Cancellations eat about 7% of gross revenue. Noticeable, but not the story
 
-## How to Run
-
-1. Run `clean_data.py` on the raw `online_retail_II.xlsx` file. It outputs a cleaned CSV
-2. Import that CSV into Power BI
-3. Load the measures and relationships from this repo
-4. Click through the three dashboard pages

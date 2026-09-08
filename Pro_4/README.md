@@ -1,6 +1,6 @@
 # Loan Applications Analysis
 
-Part of my data analytics portfolio (Pro 5). This project looks at 614 loan applications and tries to answer the questions a loan company's underwriting team actually cares about: who gets approved, why, and where the process might be leaving money on the table or treating people unfairly.
+This project looks at 614 loan applications and tries to answer the questions a loan company's underwriting team actually cares about: who gets approved, why, and where the process might be leaving money on the table or treating people unfairly.
 
 Pipeline: Python for cleaning and EDA, Power BI for the dashboard, DAX for the derived columns and measures.
 
@@ -52,7 +52,7 @@ Five pages, built natively in Power BI. Married and Gender slicers sit at the to
 
 KPI strip (Approval Rate, Total Applications, Rejected Count, Approval Count, Average Loan Amount), approved/rejected donut, approval rate by credit history, and a cross-tab table of approvals and rejections by Property Area and Education.
 
-![Approval Overview page](screenshots/dashboard_overview.png)
+![Approval Overview page](Images/1.Overview.png)
 
 The credit history gap shows up immediately here: 79% approval for Good credit, 8% for Bad. That single chart carries most of the story this dashboard tells.
 
@@ -60,7 +60,7 @@ The credit history gap shows up immediately here: 79% approval for Good credit, 
 
 Approval and rejection rate, shown as 100% stacked bars, broken out by Income Band, Education, Property Area, and Employment Status.
 
-![Approval by Applicant Profile page](screenshots/dashboard_applicant_profile.png)
+![Approval by Applicant Profile page](Images/2.Approval_by_Profile.png)
 
 Property Area has the widest spread here: Semiurban approves 77% of applications, Rural only 61%. Employment status barely matters, Salaried and Self-Employed sit within a point of each other.
 
@@ -68,7 +68,7 @@ Property Area has the widest spread here: Semiurban approves 77% of applications
 
 Average loan amount by property area, the applicant income vs co-applicant income scatter, and total income vs loan amount trended across income bands.
 
-![Loan Amount and Income Analysis page](screenshots/dashboard_loan_income.png)
+![Loan Amount and Income Analysis page](Images/3.Loan_and_Income_analysis.png)
 
 The scatter makes the co-applicant income pattern visible at a glance, most applicants cluster near zero co-applicant income regardless of approval outcome, with no obvious separation by color. The income vs loan amount line flattens out past the Mid band, so loan sizing doesn't keep scaling linearly with income at the top end.
 
@@ -76,7 +76,7 @@ The scatter makes the co-applicant income pattern visible at a glance, most appl
 
 A nested approval-rate table by Property Area, Credit History, Education, and Employment Status, plus average loan-to-income ratio by income band.
 
-![Segment and Risk Deep-Dive page](screenshots/dashboard_segment_risk.png)
+![Segment and Risk Deep-Dive page](Images/4.Segment_and_Risk_Dive.png)
 
 This page is where the loan-to-income finding lives: 260K for Very High earners versus 74K for Low earners. Worth a second look from a risk standpoint, since it means higher earners aren't just borrowing more, they're borrowing more relative to what they make.
 
@@ -95,32 +95,6 @@ Built as calculated columns in the LoanCln table rather than in Python, so the d
 
 One gotcha worth flagging for anyone rebuilding this: sorting Income_Band by a separate sort-key column that referenced Income_Band directly threw a circular dependency error, repeatedly, even after recreating the column from scratch. Fixed by rebuilding the sort key independently from TotalIncome instead of from Income_Band, so there's no reference chain back to the column being sorted.
 
-## Python analysis
-
-Alongside the DAX columns, the same nine derived columns were rebuilt in pandas, plus 11 more that go past what DAX comfortably handles: correlation analysis, grouped approval rates, IQR-based outlier detection, a chi-square test on credit history, a missingness check on Self_Employed, a logistic regression baseline, and pivot tables cross-checked against the Power BI matrix to confirm both tools agree on the numbers.
-
-Full list of questions, plus which pandas function answers each one, is in `analysis_questions.md`.
-
-## Repo structure
-
-```
-Pro_5/
-├── data/
-│   ├── Loan.csv                  # raw data
-│   └── Loan_Cleaned.csv          # cleaned, Power BI-ready
-├── python/
-│   ├── clean_loan_data.py        # cleaning script
-│   └── loan_python_analysis.py   # extended EDA
-├── powerbi/
-│   └── Loan_Dashboard.pbix
-├── screenshots/
-│   ├── dashboard_overview.png
-│   ├── dashboard_applicant_profile.png
-│   ├── dashboard_loan_income.png
-│   └── dashboard_segment_risk.png
-└── README.md
-```
-
 ## Tools
 
-Python (pandas, numpy, scipy, scikit-learn), Power BI (Power Query, DAX), Git.
+Python (pandas), Power BI (Power Query, DAX), Git.
