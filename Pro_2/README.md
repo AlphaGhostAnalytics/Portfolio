@@ -38,13 +38,13 @@ I hit a wall trying to sort `arrival_date_month` with a `SWITCH`-based sort key 
 
 ### Page 1: Overview
 
-![Overview page](images/1.Overview.png)
+![Overview page](Images/1.Overview.png)
 
 This page sets the context before diving into cancellations: total bookings, total cancellations, average length of stay, and average lead time up top, then a breakdown of cancellation rate by hotel type, a map of the top countries generating bookings, and a look at booking volume by year.
 
 ### Page 2: Cancellation Rate
 
-![Cancellation rate page](images/2.Cancellation.png)
+![Cancellation rate page](Images/2.Cancellation.png)
 
 This page is the deep dive into what's actually driving cancellations, broken out by month, customer type, distribution channel, and deposit type. Two things jumped out immediately:
 
@@ -62,11 +62,11 @@ This page is the deep dive into what's actually driving cancellations, broken ou
 - **Does lead time relate to cancellations?** Not built yet. I'm planning a lead-time-bucketed breakdown for the Cancellation Rate page.
 - **Which customer types have the highest cancellation rates?** Transient guests, at 0.41, per the "Cancellation Rate by customer type" chart.
 - **How does booking channel affect cancellations?** Bookings through an undefined channel cancel at 0.80, far above any named channel. That's the "Cancellation Rate by distribution channel" chart.
-- **How does deposit type relate to cancellations?** Non-refundable deposits cancel at 0.99. Honestly the most surprising number in the whole dashboard.
+- **How does deposit type relate to cancellations?** Non-refundable deposits cancel at 0.99. Honestly, the most surprising number in the whole dashboard.
 - **What is the average length of stay?** About 3.43 nights, from the Average Length of Stay card.
-- **Which room types are booked most frequently?** Not built yet, planned for the Overview page.
+- **Which room types are booked most frequently?** Not built yet; planned for the Overview page.
 - **How does seasonality affect hotel demand?** Partly answered by the yearly trend line. Still need a proper month-level view.
-- **What recommendations could help the hotel reduce cancellations and improve revenue?** Not written up yet. It'll probably center on the deposit type and distribution channel findings above since those are the two clearest levers I've found.
+- **What recommendations could help the hotel reduce cancellations and improve revenue?** Not written up yet. It'll probably centre on the deposit type and distribution channel findings above since those are the two clearest levers I've found.
 
 ## What's next
 
