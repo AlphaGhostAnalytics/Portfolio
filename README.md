@@ -17,11 +17,11 @@ I treat the business questions as the starting point, not an afterthought. Each 
 
 | # | Project | Dataset | Status |
 |---|---------|---------|--------|
-| Pro | Telco Customer Churn | Telco customer records | Complete |
-| Pro 2 | Hotel Bookings | Hotel booking records | Complete |
-| Pro 3 | Online Retail II | Online retail transactions | Complete |
-| Pro 4 | Loan Applications | 614 loan application records | Complete |
-| Pro 5 | HR Employee Attrition | HR employee data | Complete |
+| telco-churn-analysis | Telco Customer Churn | Telco customer records | Complete |
+| Hotel_Bookings | Hotel Bookings | Hotel booking records | Complete |
+| online_retail_Store | Online Retail II | Online retail transactions | Complete |
+| Loan | Loan Applications | 614 loan application records | Complete |
+| HR-Employee-Attrition | HR Employee Attrition | HR employee data | Complete |
 
 Each project folder has its own README with the specifics: the business questions it answers, the cleaning decisions, and any quirks I ran into building the dashboard.
 
